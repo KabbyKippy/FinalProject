@@ -8,6 +8,7 @@ public class LaundryOrder extends Laundry{
 		this.color = color;
 		this.washed = false;
 		this.dry = false;
+		this.timeC = 0;
 	}
 
 	@Override
@@ -45,7 +46,10 @@ public class LaundryOrder extends Laundry{
 		dry = true;
 		
 	}
-	
+	public void addT(int t)
+	{
+		this.timeC = this.timeC + t;
+	}
 	
 	
 	
