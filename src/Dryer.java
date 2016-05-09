@@ -6,6 +6,8 @@ public class Dryer implements Machine<LaundryOrder>{
 	static final int oneload = 20; // number of articles of clothing which go into one laod
 	int hold = 0; // holds the number of clothing artcles for the operate method
 	int time = 0;
+	public Dryer()
+	{System.out.println("the company currently has " + Dryer + " Dryer machines");}
 	public void setDryer(int dryerM)
 	{
 		this.Dryer = dryerM; // set the number of washers

@@ -9,8 +9,13 @@ public class Worker {
 	
 	double cost;
 	double cashAmount;
-	
+	public void setOrder(LaundryOrder order)
+	{		this.order = order;
+		
+	}
 	public void takeOrder(LaundryOrder order, double cashAmount){
+
+		
 		this.order = order;
 		this.cashAmount = cashAmount;
 	}
@@ -32,16 +37,16 @@ public class Worker {
 		
 	}
 	
-	public double getOrderStatus(){
+	public boolean getOrderStatus(){// will end the program if you are short so that you can remake order
 		if(cashAmount - calculateCost() >= 0)
 		{
-			System.out.println("Your order has been accepted");
-			return cashAmount - calculateCost();
+			System.out.println("Your order has been accepted! your change is: $" + ( cashAmount - calculateCost())  );
+			return true;
 		}
 		else
 		{
-			System.out.println("We cannot accept your order, you do not have enough funds");
-			return cashAmount - calculateCost();
+			System.out.println("We cannot accept your order, you do not have enough funds you are short: $" +  (cashAmount - calculateCost()));
+			return false;
 		}
 	}
 }

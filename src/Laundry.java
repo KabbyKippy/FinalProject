@@ -28,12 +28,12 @@ public abstract class Laundry {
 	}
 	public String toString()
 	{
-		return "You have: Shirts" + numOfShirts+ ", Pants" + numOfPants +"Socks "+ numOfSocks;
+		return "You have: Shirts" + numOfShirts+ ", Pants" + numOfPants +"Socks "+ numOfSocks + "the color status of this order is : " + color+ "yup";
 		
 		
 	}
 	public int getT(){return timeC;}
-	public String Time()
+	public void Time()
 	{	int minute = 0;
 		int hour = 0 ;
 		int days = 0 ;
@@ -49,6 +49,6 @@ public abstract class Laundry {
 		}
 		minute = timeC%60;
 		
-		return "It will take: " + days + "days ," + hour + "hours and " + minute+ " minutes for your clothes to be prepared!" ;
+		System.out.println("It will take: " + days + "days ," + hour + "hours and " + minute+ " minutes for your clothes to be prepared!") ;
 	}
 }

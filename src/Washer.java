@@ -6,6 +6,8 @@ public class Washer implements Machine<LaundryOrder> {
 	static final int oneload = 10; // number of articles of clothing which go into one laod
 	int hold = 0; // holds the number of clothing artcles for the operate method
 	int time = 0;
+	public Washer()
+	{System.out.println("the company currently has " + washerM + " Washer machines");}
 	public void setWasher(int washerM)
 	{
 		this.washerM = washerM; // set the number of washers
