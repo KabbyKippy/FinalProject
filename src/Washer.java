@@ -2,9 +2,9 @@
 public class Washer implements Machine<LaundryOrder> {
 	int washerM = 10; // number of washer machines which the store has
 	static final int cwash = 30; // amount of time it takes to wash colored clothing
-	static final int wwash = 26; // the amoutn of time it takes to wash non colored (white) clothing
+	static final int wwash = 26; // the amount of time it takes to wash non colored (white) clothing
 	static final int oneload = 10; // number of articles of clothing which go into one laod
-	int hold = 0; // holds the number of clothing artcles for the operate method
+	int hold = 0; // holds the number of clothing articles for the operate method
 	int time = 0;
 	public Washer()
 	{System.out.println("the company currently has " + washerM + " Washer machines");}
