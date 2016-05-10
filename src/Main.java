@@ -23,7 +23,7 @@ public class Main {
 		System.out.println("type 1 for colored clothes type 0 for white clothing! (To end enter -1)");
 		int color = sc.nextInt();
 		if(color == -1){break;}
-		if(color != 1 && color !=0){System.out.println("Invalid value you entered " + color +" please try again");break;}
+		//if(color != 1 && color !=0){System.out.println("Invalid value you entered " + color +" please try again");break;}
 		if(color == 1){
 		System.out.println("How many colored shirts do you have today? (To end type '-1' at anytime)");
 		int shirt = sc.nextInt();
@@ -65,7 +65,7 @@ public class Main {
 		System.out.println("How many non-colored socks do you have today? (To end type '-1' at anytime)");
 		int sock = sc.nextInt();
 		if(sock == -1){break;}
-		p1.createOrder(shirt, pant, sock, true, p1.name);
+		p1.createOrder(shirt, pant, sock, false, p1.name);
 		work.setOrder(p1.order);
 		//System.out.println(work.order.toString());
 		System.out.println("The order amount is: " + work.calculateCost()+ "$");
